@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thread Pool Manager (Multicore Task Scheduler)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Thread Pool Manager</h1>
+    <p>Simulating a <strong>Multithreaded Task Scheduler</strong> for Multicore Systems</p>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div>
+        <label for="threadCount">Number of Threads (Cores):</label>
+        <input type="number" id="threadCount" min="1" max="16" value="4" />
+      </div>
+      <div>
+        <label for="taskDuration">Task Duration (ms):</label>
+        <input type="number" id="taskDuration" min="100" max="5000" value="1000" />
+      </div>
+      <div>
+        <label for="taskPriority">Task Priority:</label>
+        <select id="taskPriority">
+          <option value="high">High</option>
+          <option value="medium" selected>Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+      <button id="addTask">Add Task</button>
+      <button id="startSimulation">Start Simulation</button>
+      <button id="reset">Reset</button>
+    </div>
+
+    <!-- Thread Visualization -->
+    <div class="threads-container">
+      <h2>Thread Pool</h2>
+      <div id="threads"></div>
+    </div>
+
+    <!-- Task Queue -->
+    <div class="task-queue">
+      <h2>Task Queue</h2>
+      <div id="queue"></div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <h2>Statistics</h2>
+      <p>Tasks Completed: <span id="completed">0</span></p>
+      <p>Tasks Pending: <span id="pending">0</span></p>
+      <p>Thread Utilization: <span id="utilization">0%</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

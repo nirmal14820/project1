@@ -1,0 +1,170 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #111;
+    margin: 0;
+    padding: 20px;
+    color: #eee;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.3);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #4af;
+  }
+  
+  h2 {
+    color: #6bf;
+    border-bottom: 2px solid #6bf;
+    padding-bottom: 5px;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .controls div {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ccc;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+  }
+  
+  button {
+    background: #08f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+  }
+  
+  button:hover {
+    background: #06d;
+  }
+  
+  #reset {
+    background: #f44;
+  }
+  
+  #reset:hover {
+    background: #d33;
+  }
+  
+  .threads-container,
+  .task-queue,
+  .stats {
+    margin-top: 20px;
+    padding: 15px;
+    background: #2a2a2a;
+    border-radius: 5px;
+    border: 1px solid #444;
+  }
+  
+  #threads {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .thread {
+    flex: 1;
+    min-width: 100px;
+    background: #333;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #444;
+  }
+  
+  .thread-busy {
+    background: #2ecc71;
+    height: 5px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width linear;
+  }
+  
+  .thread-working .thread-busy {
+    width: 100%;
+  }
+  
+  #queue {
+    min-height: 50px;
+    border: 1px dashed #555;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .task {
+    background: #f90;
+    color: #222;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .task.high {
+    background: #e74c3c;
+    color: #fff;
+  }
+  
+  .task.medium {
+    background: #f1c40f;
+    color: #222;
+  }
+  
+  .task.low {
+    background: #2ecc71;
+    color: #222;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .stats p {
+    margin: 5px 0;
+    font-weight: bold;
+  }
+  
+  .status {
+    font-weight: bold;
+  }
+  
